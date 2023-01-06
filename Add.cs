@@ -11,13 +11,15 @@ namespace ChameleonProject
     public partial class Add : Form
     {
 
+
+        MinisterioDeSeguridadEntities db = new MinisterioDeSeguridadEntities();
+
+
         public Add()
         {
             InitializeComponent();
         }
 
-
-   
 
 
         public static string usuarioAdd;
@@ -44,22 +46,22 @@ namespace ChameleonProject
             SendKeys.Send("{ESC}"); /* Hace la simulación de la tecla Escape, también puedes usar {ENTER} */
         }
 
-        //private bool Exist()
-        //{
+        private bool Exist()
+        {
 
-        //    int TipoAsamblea = Convert.ToInt32(cboTipoAsamblea.SelectedValue);
-        //    DateTime fecha = Convert.ToDateTime(mskFecha.Text);
+            int TipoAsamblea = Convert.ToInt32(cboTipoAsamblea.SelectedValue);
+            DateTime fecha = Convert.ToDateTime(mskFecha.Text);
 
-        //    //var existe = db.ActasDeAsambleas.SingleOrDefault(a => a.NumeroActa == txtActa.Text && a.Fecha == fecha && a.IdTipoAsamblea == TipoAsamblea);
-        //    //if (existe != null)
-        //    //{
-        //    //    return true;
-        //    //}
-        //    //else { return false; };
+            var existe = db.ActasDeAsambleas.SingleOrDefault(a => a.NumeroActa == txtActa.Text && a.Fecha == fecha && a.IdTipoAsamblea == TipoAsamblea);
+            if (existe != null)
+            {
+                return true;
+            }
+            else { return false; };
 
-        //}
+        }
 
-  
+
         private void TypeActas()
         {
             //var type = db.TiposActasDeAsambleas.ToList();
@@ -73,29 +75,7 @@ namespace ChameleonProject
             //}
         }
 
-        private void SelectedItem(object sender, EventArgs e)
-        {
-            if (cboTipoDocumento.SelectedIndex == 1)
-            {
-                DatosActasDeDirectorio.Visible = true;
-                DatosActasDeDirectorio.Enabled = true;
-                dgvActaDirectorio.Visible = true;
-                dgvActaDirectorio.Enabled = true;
-
-                DatosActaDeAsamblea.Visible = false;
-                DatosActaDeAsamblea.Enabled = false;
-                dgvActasAsambleas.Visible = false;
-                dgvActasAsambleas.Enabled = false;
-
-                LegajosDeAfiliados.Visible = false;
-                LegajosDeAfiliados.Enabled = false;
-                dgvLA.Visible = false;
-                dgvLA.Enabled = false;
-            }
-        
-
-        }
-
+     
         private void AddData(object sender, EventArgs e)
         {
 

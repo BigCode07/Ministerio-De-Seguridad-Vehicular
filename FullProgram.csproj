@@ -93,12 +93,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add.Designer.cs">
-      <DependentUpon>Add.cs</DependentUpon>
-    </Compile>
     <Compile Include="Billing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +112,35 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="LegajosVehiculare.cs">
+      <DependentUpon>LegajosVehiculares.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LegajosVehiculares.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegajosVehiculares.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LegajosVehiculares.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegajosVehiculares.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LegajosVehiculares.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegajosVehiculares.edmx</DependentUpon>
+    </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marca.cs">
+      <DependentUpon>LegajosVehiculares.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo.cs">
+      <DependentUpon>LegajosVehiculares.tt</DependentUpon>
     </Compile>
     <Compile Include="Presentation.cs">
       <SubType>Form</SubType>
@@ -138,9 +156,15 @@
     <Compile Include="Query.Designer.cs">
       <DependentUpon>Query.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add.resx">
-      <DependentUpon>Add.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>LegajosVehiculares.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoMovil.cs">
+      <DependentUpon>LegajosVehiculares.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vehiculo.cs">
+      <DependentUpon>LegajosVehiculares.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Billing.resx">
       <DependentUpon>Billing.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +193,13 @@
     <EmbeddedResource Include="Query.resx">
       <DependentUpon>Query.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="LegajosVehiculares.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LegajosVehiculares.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LegajosVehiculares.edmx.diagram">
+      <DependentUpon>LegajosVehiculares.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -185,6 +216,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LegajosVehiculares.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LegajosVehiculares.edmx</DependentUpon>
+      <LastGenOutput>LegajosVehiculares.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LegajosVehiculares.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LegajosVehiculares.edmx</DependentUpon>
+      <LastGenOutput>LegajosVehiculares.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

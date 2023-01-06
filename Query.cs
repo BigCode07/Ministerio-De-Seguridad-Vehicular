@@ -13,7 +13,7 @@ namespace ChameleonProject
             InitializeComponent();
         }
 
-        //CajaPrevisionBncoEntities db = new CajaPrevisionBncoEntities();
+        MinisterioDeSeguridadEntities db = new MinisterioDeSeguridadEntities();
 
         private void showMessage(string msg, int duration)
         {
@@ -36,28 +36,44 @@ namespace ChameleonProject
             SendKeys.Send("{ESC}"); /* Hace la simulación de la tecla Escape, también puedes usar {ENTER} */
         }
 
-
+        private void CallPatents()
+        {
+            var patents = db.Vehiculos.ToList();
+            if (patents.Count() > 0)
+            {
+                cboPatents.DataSource = patents;
+                cboPatents.DisplayMember = "ChapaPatente";
+                cboPatents.ValueMember = "Id";
+                cboPatents.SelectedIndex = -1;
+            }
+            else { return; }
+        }
         private void QueryData(object sender, EventArgs e)
         {
 
-            //if (cboTipoDocumento.SelectedIndex == 0)
-            //{
-            //    dgvActaDeAsamblea.Rows.Clear();
 
-            //    IQueryable<ActasDeAsambleas> actas = db.ActasDeAsambleas;
+            dgv.Rows.Clear();
 
+            IQueryable<LegajosVehiculare> legajos = db.LegajosVehiculares;
+            IQueryable<Vehiculo> vehiculos = db.Vehiculos;
 
+            if (cboPatents.Text != "")
+            {
+                vehiculos = vehiculos.Where(v => v.ChapaPatente == cboPatents.Text);
+            }
 
-            //    if (txtCaja.Text != "")
-            //    {
-            //        int caja = Convert.ToInt32(txtCaja.Text);
-            //        actas = actas.Where(a => a.Caja == caja);
-            //    }
+            if (txtBox.Text != "")
+            {
+                int box = Convert.ToInt32(txtBox.Text);
+                legajos = legajos.Where(a => a.Caja == box);
+            }
 
-            //    if (txtActa.Text != "")
-            //    {
-            //        actas = actas.Where(a => a.NumeroActa == txtActa.Text);
-            //    }
+            if (txtSubBox.Text != "")
+            {
+                int subbox = Convert.ToInt32(txtSubBox.Text);
+                legajos = legajos.Where(a => a.SubCaja == subbox);
+            }
+           
 
             //    if (mskFecha.MaskCompleted == true)
             //    {
@@ -166,7 +182,7 @@ namespace ChameleonProject
         private void CallDgv(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (dgvActaDeAsamblea.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+            if (dgv.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
             {
                 //if (MessageBox.Show("Seguro desea Eliminar este Registro?", "Eliminar", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 //{
@@ -185,7 +201,7 @@ namespace ChameleonProject
             }
 
 
-            if (dgvActaDeAsamblea.Columns[e.ColumnIndex].Name.Equals("Modificar"))
+            if (dgv.Columns[e.ColumnIndex].Name.Equals("Modificar"))
             {
                 //if (MessageBox.Show("Seguro desea modificar este registro?", "Modificar?", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 //{
@@ -232,9 +248,9 @@ namespace ChameleonProject
 
         private void CallImage(object sender, DataGridViewCellEventArgs e)
         {
-            axAcroPDF1.src = ConfigurationManager.AppSettings["ImagenesActaDeAsamblea"] + "\\" + dgvActaDeAsamblea.CurrentRow.Cells["Imagen"].Value.ToString();
-            axAcroPDF1.src = ConfigurationManager.AppSettings["ImagenesActaDeDirectorio"] + "\\" + dgvAD.CurrentRow.Cells["ImagenAD"].Value.ToString();
-            axAcroPDF1.src = ConfigurationManager.AppSettings["ImagenesLegajosAfiliados"] + "\\" + dgvAD.CurrentRow.Cells["ImagenLA"].Value.ToString();
+            //axAcroPDF1.src = ConfigurationManager.AppSettings["ImagenesActaDeAsamblea"] + "\\" + dgvActaDeAsamblea.CurrentRow.Cells["Imagen"].Value.ToString();
+            //axAcroPDF1.src = ConfigurationManager.AppSettings["ImagenesActaDeDirectorio"] + "\\" + dgvAD.CurrentRow.Cells["ImagenAD"].Value.ToString();
+            //axAcroPDF1.src = ConfigurationManager.AppSettings["ImagenesLegajosAfiliados"] + "\\" + dgvAD.CurrentRow.Cells["ImagenLA"].Value.ToString();
         }
 
         private void Desplace(object sender, KeyPressEventArgs e)
@@ -283,7 +299,7 @@ namespace ChameleonProject
 
                 txtCaja.Text = txtActa.Text = mskFecha.Text = mskFCarga.Text = txtUsuario.Text = "";
                 cboTipoAsamblea.SelectedIndex = -1;
-                dgvActaDeAsamblea.Rows.Clear();
+                dgv.Rows.Clear();
                 txtCaja.Focus();
         
          

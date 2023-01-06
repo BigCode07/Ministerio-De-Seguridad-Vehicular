@@ -83,13 +83,7 @@ namespace ChameleonProject
             OpenChildForm(fm);
         }
 
-        private void Adds(object sender, EventArgs e)
-        {
-            var fm = new Add();
-            //Add.usuarioAdd = this.UsuarioMenu;
-            //Add.Contador = this.Contador;
-            OpenChildForm(fm);
-        }
+ 
 
         private void Query(object sender, EventArgs e)
         {

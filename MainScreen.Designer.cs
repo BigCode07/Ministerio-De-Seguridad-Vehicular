@@ -250,7 +250,7 @@
             this.BtnAdd.TabIndex = 1;
             this.BtnAdd.Text = "Carga";
             this.BtnAdd.UseVisualStyleBackColor = true;
-            this.BtnAdd.Click += new System.EventHandler(this.Adds);
+
             // 
             // BtnDigitize
             // 

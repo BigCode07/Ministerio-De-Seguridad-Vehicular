@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a13492c61db47138099c96297f0a4b8" Name="Diagram1">
+        <EntityTypeShape EntityType="MinisterioDeSeguridadModel.LegajosVehiculare" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MinisterioDeSeguridadModel.Marca" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MinisterioDeSeguridadModel.Modelo" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MinisterioDeSeguridadModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MinisterioDeSeguridadModel.TipoMovil" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MinisterioDeSeguridadModel.Vehiculo" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="MinisterioDeSeguridadModel.FK_LegajosVehiculares_Vehiculos" ManuallyRouted="false" />
+        <AssociationConnector Association="MinisterioDeSeguridadModel.FK_Legajos_Marcas" ManuallyRouted="false" />
+        <AssociationConnector Association="MinisterioDeSeguridadModel.FK_Modelo_TipoMovil" ManuallyRouted="false" />
+        <AssociationConnector Association="MinisterioDeSeguridadModel.FK_Vehiculos_Modelo" ManuallyRouted="false" />
+        <AssociationConnector Association="MinisterioDeSeguridadModel.FK_Legajos_TipoMovil" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
