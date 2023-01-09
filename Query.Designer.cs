@@ -50,8 +50,9 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Caja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubCaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoMovil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoMovil = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Chasis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroMotor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,6 +108,7 @@
             this.SubCaja,
             this.TipoMovil,
             this.Marca,
+            this.Patente,
             this.Chasis,
             this.NumeroMotor,
             this.Imagen,
@@ -282,11 +284,20 @@
             // 
             this.TipoMovil.HeaderText = "Tipo Movil";
             this.TipoMovil.Name = "TipoMovil";
+            this.TipoMovil.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TipoMovil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Marca
             // 
             this.Marca.HeaderText = "Marca";
             this.Marca.Name = "Marca";
+            this.Marca.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Marca.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Patente
+            // 
+            this.Patente.HeaderText = "Patente";
+            this.Patente.Name = "Patente";
             // 
             // Chasis
             // 
@@ -386,8 +397,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Caja;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubCaja;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoMovil;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.DataGridViewComboBoxColumn TipoMovil;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Patente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Chasis;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroMotor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;

@@ -73,7 +73,7 @@ namespace ChameleonProject
                 int subbox = Convert.ToInt32(txtSubBox.Text);
                 legajos = legajos.Where(a => a.SubCaja == subbox);
             }
-           
+
 
             //    if (mskFecha.MaskCompleted == true)
             //    {
@@ -99,14 +99,14 @@ namespace ChameleonProject
             //        actas = actas.Where(a => a.Fecha == fecha);
             //    }
 
-            //    if (actas.Count() > 0)
-            //    {
+            if (actas.Count() > 0)
+            {
 
-            //        foreach (var le in actas.ToList())
-            //        {
-            //            dgvActaDeAsamblea.Rows.Add(le.Id, le.Caja, le.NumeroActa, le.IdTipoAsamblea, le.Fecha, le.Imagen, le.Usuario, le.FechaCarga);
-            //        }
-            //    }
+                foreach (var le in actas.ToList())
+                {
+                    dgvActaDeAsamblea.Rows.Add(le.Id, le.Caja, le.NumeroActa, le.IdTipoAsamblea, le.Fecha, le.Imagen, le.Usuario, le.FechaCarga);
+                }
+            }
             //    else
             //    {
             //        showMessage("No hay registros", 1500);
@@ -242,10 +242,6 @@ namespace ChameleonProject
             }
         }
 
-
-
-
-
         private void CallImage(object sender, DataGridViewCellEventArgs e)
         {
             //axAcroPDF1.src = ConfigurationManager.AppSettings["ImagenesActaDeAsamblea"] + "\\" + dgvActaDeAsamblea.CurrentRow.Cells["Imagen"].Value.ToString();
@@ -297,10 +293,10 @@ namespace ChameleonProject
         private void AllClear(object sender, EventArgs e)
         {
 
-                txtCaja.Text = txtActa.Text = mskFecha.Text = mskFCarga.Text = txtUsuario.Text = "";
-                cboTipoAsamblea.SelectedIndex = -1;
-                dgv.Rows.Clear();
-                txtCaja.Focus();
+                //txtCaja.Text = txtActa.Text = mskFecha.Text = mskFCarga.Text = txtUsuario.Text = "";
+                //cboTipoAsamblea.SelectedIndex = -1;
+                //dgv.Rows.Clear();
+                //txtCaja.Focus();
         
          
         }
