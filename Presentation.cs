@@ -22,15 +22,15 @@ namespace ChameleonProject
             this.Visible = false;
             this.Time.Stop();
 
-            //CtlUsuario1.Programa = this.Text;
-            //ClaseCompartida.Contador = CtlUsuario1.contReg();
-            //CtlUsuario1.Ejecutar();
-            //if (!CtlUsuario1.valido)
-            //{
-            //    Application.Exit();
-            //    return;
-            //}
-            //else { ClaseCompartida.Usuario = CtlUsuario1.UsuarioRegistrado; }
+            CtlUsuario1.Programa = this.Text;
+            ClaseCompartida.Contador = CtlUsuario1.contReg();
+            CtlUsuario1.Ejecutar();
+            if (!CtlUsuario1.valido)
+            {
+                Application.Exit();
+                return;
+            }
+            else { ClaseCompartida.Usuario = CtlUsuario1.UsuarioRegistrado; }
 
             MainScreen main_Screen = new MainScreen();
             main_Screen.UsuarioMenu = ClaseCompartida.Usuario;

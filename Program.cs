@@ -16,7 +16,7 @@ namespace ChameleonProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Digitize());
+            Application.Run(new Presentation());
         }
     }
 }

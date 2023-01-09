@@ -32,7 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Presentation));
             this.BackgroundPicture = new System.Windows.Forms.PictureBox();
             this.Time = new System.Windows.Forms.Timer(this.components);
+            this.CtlUsuario1 = new AxUsuarioOcx1.AxCtlUsuario();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CtlUsuario1)).BeginInit();
             this.SuspendLayout();
             // 
             // BackgroundPicture
@@ -45,7 +47,6 @@
             this.BackgroundPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BackgroundPicture.TabIndex = 0;
             this.BackgroundPicture.TabStop = false;
-    
             // 
             // Time
             // 
@@ -53,11 +54,23 @@
             this.Time.Interval = 1500;
             this.Time.Tick += new System.EventHandler(this.Timer);
             // 
+            // CtlUsuario1
+            // 
+            this.CtlUsuario1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.CtlUsuario1.Enabled = true;
+            this.CtlUsuario1.Location = new System.Drawing.Point(0, 234);
+            this.CtlUsuario1.Name = "CtlUsuario1";
+            this.CtlUsuario1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("CtlUsuario1.OcxState")));
+            this.CtlUsuario1.Size = new System.Drawing.Size(384, 50);
+            this.CtlUsuario1.TabIndex = 336;
+            this.CtlUsuario1.Visible = false;
+            // 
             // Presentation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(384, 284);
+            this.Controls.Add(this.CtlUsuario1);
             this.Controls.Add(this.BackgroundPicture);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -66,6 +79,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Presentation";
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CtlUsuario1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,6 +88,6 @@
 
         private System.Windows.Forms.PictureBox BackgroundPicture;
         private System.Windows.Forms.Timer Time;
- 
+        private AxUsuarioOcx1.AxCtlUsuario CtlUsuario1;
     }
 }

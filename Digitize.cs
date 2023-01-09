@@ -121,7 +121,7 @@ namespace ChameleonProject
                 legajos.SubCaja = Convert.ToInt32(txtSubBox.Text);
                 legajos.IdVehiculo = OriginCar;
                 legajos.FechaCarga = DateTime.Now;
-                legajos.Usuario = "SystemsTesting";
+                legajos.Usuario = usuarioAdd;
                 db.LegajosVehiculares.Add(legajos);
                 db.SaveChanges();
                 showMessage("Se cargaron los datos", 1000);

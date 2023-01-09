@@ -53,8 +53,8 @@
             this.gbTipoDocument.BackColor = System.Drawing.Color.Cornsilk;
             this.gbTipoDocument.Controls.Add(this.cboTipoDocumento);
             this.gbTipoDocument.Controls.Add(this.label8);
-            this.gbTipoDocument.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Inch, ((byte)(0)));
-            this.gbTipoDocument.Location = new System.Drawing.Point(294, 27);
+            this.gbTipoDocument.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Inch, ((byte)(0)));
+            this.gbTipoDocument.Location = new System.Drawing.Point(297, 27);
             this.gbTipoDocument.Name = "gbTipoDocument";
             this.gbTipoDocument.Size = new System.Drawing.Size(514, 71);
             this.gbTipoDocument.TabIndex = 380;
@@ -63,7 +63,7 @@
             // cboTipoDocumento
             // 
             this.cboTipoDocumento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboTipoDocumento.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoDocumento.FormattingEnabled = true;
             this.cboTipoDocumento.Items.AddRange(new object[] {
             "Actas De Asambleas",
@@ -71,7 +71,7 @@
             "Legajos Afiliados"});
             this.cboTipoDocumento.Location = new System.Drawing.Point(200, 21);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
-            this.cboTipoDocumento.Size = new System.Drawing.Size(247, 28);
+            this.cboTipoDocumento.Size = new System.Drawing.Size(247, 26);
             this.cboTipoDocumento.TabIndex = 0;
             this.cboTipoDocumento.TabStop = false;
             // 
@@ -79,10 +79,10 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(50, 24);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 20);
+            this.label8.Size = new System.Drawing.Size(123, 18);
             this.label8.TabIndex = 2;
             this.label8.Text = "Tipo Documento:";
             // 
@@ -92,7 +92,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.monthCalendar.CalendarDimensions = new System.Drawing.Size(3, 2);
-            this.monthCalendar.Location = new System.Drawing.Point(175, 110);
+            this.monthCalendar.Location = new System.Drawing.Point(207, 110);
             this.monthCalendar.MaxSelectionCount = 9999;
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 381;
@@ -114,10 +114,10 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(291, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.Size = new System.Drawing.Size(0, 18);
             this.label1.TabIndex = 0;
             // 
             // Billing
@@ -128,7 +128,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.monthCalendar);
             this.Controls.Add(this.gbTipoDocument);
-            this.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Billing";
             this.Text = "Billing";

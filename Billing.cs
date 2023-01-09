@@ -13,21 +13,21 @@ namespace ChameleonProject
             InitializeComponent();
         }
 
-    
+        MinisterioDeSeguridadEntities db = new MinisterioDeSeguridadEntities();
 
         private void SelectDates(object sender, DateRangeEventArgs e)
         {
             label1.Text = "";
-            //IQueryable<ActasDeAsambleas> actasDeAsambleas = db.ActasDeAsambleas;
+            IQueryable<LegajosVehiculare> legajos = db.LegajosVehiculares;
 
 
             if (cboTipoDocumento.SelectedIndex == 0)
             {
-                //DateTime fechaInicio = Convert.ToDateTime(monthCalendar.SelectionStart);
-                //DateTime fechaFin = Convert.ToDateTime(monthCalendar.SelectionEnd);
+                DateTime fechaInicio = Convert.ToDateTime(monthCalendar.SelectionStart);
+                DateTime fechaFin = Convert.ToDateTime(monthCalendar.SelectionEnd);
 
-                //actasDeAsambleas = actasDeAsambleas.Where(a => a.FechaCarga >= fechaInicio && a.FechaCarga <= fechaFin);
-                //label1.Text += "Registros Encontrados: " + actasDeAsambleas.Count();
+                legajos = legajos.Where(a => a.FechaCarga >= fechaInicio && a.FechaCarga <= fechaFin);
+                label1.Text += "Registros Encontrados: " + legajos.Count();
             }
 
        

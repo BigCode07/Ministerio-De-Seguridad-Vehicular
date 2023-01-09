@@ -42,7 +42,6 @@
             this.BtnExit = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.BtnQuery = new System.Windows.Forms.Button();
-            this.BtnAdd = new System.Windows.Forms.Button();
             this.BtnDigitize = new System.Windows.Forms.Button();
             this.MainScreen1 = new System.Windows.Forms.Panel();
             this.PanelTitle.SuspendLayout();
@@ -79,6 +78,7 @@
             this.btnMinize.Size = new System.Drawing.Size(25, 25);
             this.btnMinize.TabIndex = 12;
             this.btnMinize.UseVisualStyleBackColor = true;
+            this.btnMinize.Visible = false;
             this.btnMinize.Click += new System.EventHandler(this.Minimize);
             // 
             // btnMaximize
@@ -94,6 +94,7 @@
             this.btnMaximize.Size = new System.Drawing.Size(25, 25);
             this.btnMaximize.TabIndex = 11;
             this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Visible = false;
             this.btnMaximize.Click += new System.EventHandler(this.Maximize);
             // 
             // button1
@@ -162,7 +163,6 @@
             this.panelMenu.Controls.Add(this.BtnExit);
             this.panelMenu.Controls.Add(this.button5);
             this.panelMenu.Controls.Add(this.BtnQuery);
-            this.panelMenu.Controls.Add(this.BtnAdd);
             this.panelMenu.Controls.Add(this.BtnDigitize);
             this.panelMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -179,7 +179,7 @@
             this.BtnBilling.ForeColor = System.Drawing.Color.White;
             this.BtnBilling.Image = ((System.Drawing.Image)(resources.GetObject("BtnBilling.Image")));
             this.BtnBilling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnBilling.Location = new System.Drawing.Point(5, 216);
+            this.BtnBilling.Location = new System.Drawing.Point(3, 165);
             this.BtnBilling.Name = "BtnBilling";
             this.BtnBilling.Size = new System.Drawing.Size(221, 45);
             this.BtnBilling.TabIndex = 5;
@@ -228,29 +228,13 @@
             this.BtnQuery.ForeColor = System.Drawing.Color.White;
             this.BtnQuery.Image = ((System.Drawing.Image)(resources.GetObject("BtnQuery.Image")));
             this.BtnQuery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnQuery.Location = new System.Drawing.Point(5, 165);
+            this.BtnQuery.Location = new System.Drawing.Point(3, 114);
             this.BtnQuery.Name = "BtnQuery";
             this.BtnQuery.Size = new System.Drawing.Size(221, 45);
             this.BtnQuery.TabIndex = 2;
             this.BtnQuery.Text = "Consulta";
             this.BtnQuery.UseVisualStyleBackColor = true;
             this.BtnQuery.Click += new System.EventHandler(this.Query);
-            // 
-            // BtnAdd
-            // 
-            this.BtnAdd.FlatAppearance.BorderSize = 0;
-            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdd.ForeColor = System.Drawing.Color.White;
-            this.BtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdd.Image")));
-            this.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAdd.Location = new System.Drawing.Point(5, 114);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(221, 45);
-            this.BtnAdd.TabIndex = 1;
-            this.BtnAdd.Text = "Carga";
-            this.BtnAdd.UseVisualStyleBackColor = true;
-
             // 
             // BtnDigitize
             // 
@@ -313,7 +297,6 @@
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button BtnDigitize;
         private System.Windows.Forms.Button BtnQuery;
-        private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Button BtnBilling;
